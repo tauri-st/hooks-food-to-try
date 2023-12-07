@@ -5,7 +5,8 @@ import "./styles.css";
 export default function App() {
   //5.Create state with an initial value of an empty array
   const [ foodsToTry, setFoodsToTry ] = useState([]);
-  //6. Add a function to accept a food and add it to the foodsToTry array"
+  /*6. Add a function to accept a food and call the setFoodsToTry 
+  function to add it to the foodsToTry array*/
   const addFoodItem = (food) => {
     setFoodsToTry(foodsToTry.concat(food));
   }
@@ -17,9 +18,12 @@ export default function App() {
       {/*7. Map over the foodstoTry array and output a list item
       for each food*/}
       <ul className="food-list">
-        const addFoodItem = foodsToTry.map(function (item) {
+        {/*foodsToTry.map(function (item) {
           return <li>${item}</li>
-        });
+          });*/}
+        {foodsToTry.map((food, index) => {
+          <li key={index}>{food}</li>
+        })};
       </ul>
     </div>
   );

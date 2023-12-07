@@ -8,7 +8,7 @@ const NewFoodInput = (props) => {
   const [ food, setFood ] = useState("");
   {/*4. Create an updateFood function to call the setFood 
 updater function by passing it the onChange event below*/}
-  function updateFood (e) {
+  const updateFood = (e) => {
     setFood(e.target.value);
     /* 12. Use the addFoodItem function from the App component 
     and give it the food you’ve kept in state */

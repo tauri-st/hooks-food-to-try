@@ -7,7 +7,7 @@ export default function App() {
   const [ foodsToTry, setFoodsToTry ] = useState([]);
   //6. Add a function to accept a food and add it to the foodsToTry array"
   const addFoodItem = (food) => {
-    foodsToTry.concat(food);
+    setFoodsToTry(foodsToTry.concat(food));
   }
   return (
     <div className="App">

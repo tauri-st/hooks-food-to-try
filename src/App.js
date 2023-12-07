@@ -5,8 +5,9 @@ import "./styles.css";
 export default function App() {
   //5.Create state with an initial value of an empty array
   const [ foodsToTry, setFoodsToTry ] = useState([]);
-  /*6. Add a function to accept a food and call the setFoodsToTry 
-  function to add it to the foodsToTry array*/
+  /*6. Update state by adding a function to accept a food and 
+  call the setFoodsToTry function to add it to the foodsToTry 
+  array*/
   const addFoodItem = (food) => {
     setFoodsToTry(foodsToTry.concat(food));
   }

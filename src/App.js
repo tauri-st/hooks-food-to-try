@@ -12,7 +12,8 @@ export default function App() {
   return (
     <div className="App">
       <h1>New Foods to Try</h1>
-      <NewFoodInput />
+      {/*Pass the addFoodItem function as a prop to the NewFoodInput component*/}
+      <NewFoodInput addFoodItem={addFoodItem} />
       {/*3. Map over the foodstoTry array and output a list item
       for each food*/}
       <ul className="food-list">

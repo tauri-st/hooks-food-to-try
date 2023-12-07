@@ -18,7 +18,7 @@ export default function App() {
       {/*7. Map over the foodstoTry array and output a list item
       for each food*/}
       <ul className="food-list">
-        {/*foodsToTry.map(function (item) {
+        {/* HERE foodsToTry.map(function (item) {
           return <li>${item}</li>
           });*/}
         {foodsToTry.map((food, index) => (

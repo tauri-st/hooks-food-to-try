@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
-const NewFoodInput = () => {
+//9. Make sure the component accepts props as a parameter
+const NewFoodInput = (props) => {
   /*1. create a variable to keep track of the state of the food 
   item the user types in the input. Set the initial value of 
   the useState() to an empty string: ("").*/
@@ -10,8 +11,14 @@ updater function by passing it the onChange event below*/}
   function updateFood (e) {
     setFood(e.target.value);
   };
+  /*10. Create a handleSubmit function which will fire
+  whenever the user clicks on the "Add to the list" button*/
+  button.handleSubmit("click", function (e){
+    e.preventDefault();
+  });
   return (
-    <form className="food-form">
+    {/*11. Add an onSubmit handler with handleSubmit as a value */}
+    <form className="food-form" onSubmit={handleSubmit}>
       {/*2. Add the value and attribute that is equal to the food state value*/}
       {/*3. Add on onChange handler*/}
       <input type="text" value={food} onChange={updateFood}/>

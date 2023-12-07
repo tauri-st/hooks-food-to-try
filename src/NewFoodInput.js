@@ -13,12 +13,13 @@ updater function by passing it the onChange event below*/}
   };
   /* HERE 10. Create a handleSubmit function which will fire
   whenever the user clicks on the "Add to the list" button*/
-  button.handleSubmit("click", function (e){
+const handleSubmit = (e) => {
     e.preventDefault();
-    /* HERE why here not updateFood? 12. Use the addFoodItem function from the App component 
+    /* 12. Use the addFoodItem function from the App component 
     and give it the food you’ve kept in state */
     props.addFoodItem(food);
-  });
+  };
+  
   return (
     //11. Add an onSubmit handler with handleSubmit as a value
     <form className="food-form" onSubmit={handleSubmit}>

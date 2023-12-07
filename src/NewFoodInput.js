@@ -10,6 +10,9 @@ const NewFoodInput = (props) => {
 updater function by passing it the onChange event below*/}
   function updateFood (e) {
     setFood(e.target.value);
+    /* 12. Use the addFoodItem function from the App component 
+    and give it the food you’ve kept in state */
+    props.addFoodItem(food);
   };
   /*10. Create a handleSubmit function which will fire
   whenever the user clicks on the "Add to the list" button*/
@@ -17,7 +20,7 @@ updater function by passing it the onChange event below*/}
     e.preventDefault();
   });
   return (
-    {/*11. Add an onSubmit handler with handleSubmit as a value */}
+    //11. Add an onSubmit handler with handleSubmit as a value
     <form className="food-form" onSubmit={handleSubmit}>
       {/*2. Add the value and attribute that is equal to the food state value*/}
       {/*3. Add on onChange handler*/}

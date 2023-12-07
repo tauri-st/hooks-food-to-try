@@ -16,7 +16,7 @@ export default function App() {
       {/*3. Map over the foodstoTry array and output a list item
       for each food*/}
       <ul className="food-list">
-        const addFoodToList = foodsToTry.map(function (item) {
+        const addFoodItem = foodsToTry.map(function (item) {
           return <li>${item}</li>
         });
       </ul>

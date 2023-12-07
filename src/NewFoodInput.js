@@ -8,7 +8,8 @@ const NewFoodInput = () => {
   const [ food, setFood ] = useState("");
   return (
     <form className="food-form">
-      <input type="text" />
+      {/*Add the value and attribute that is equal to the food state value*/}
+      <input type="text" value={food} />
       <button>Add to the list!</button>
     </form>
   );

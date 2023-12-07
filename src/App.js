@@ -16,12 +16,9 @@ export default function App() {
       <h1>New Foods to Try</h1>
       {/*8. Pass the addFoodItem function as a prop to the NewFoodInput component*/}
       <NewFoodInput addFoodItem={addFoodItem} />
-      {/*7. Map over the foodstoTry array and output a list item
-      for each food*/}
+      {/*7. Render an Array Data Model: Map over the foodstoTry 
+      array and output a list item for each food*/}
       <ul className="food-list">
-        {/* HERE foodsToTry.map(function (item) {
-          return <li>${item}</li>
-          });*/}
         {foodsToTry.map((food, index) => (
           <li key={index}>{food}</li>
         ))};

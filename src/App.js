@@ -21,9 +21,9 @@ export default function App() {
         {/*foodsToTry.map(function (item) {
           return <li>${item}</li>
           });*/}
-        {foodsToTry.map((food, index) => {
+        {foodsToTry.map((food, index) => (
           <li key={index}>{food}</li>
-        })};
+        ))};
       </ul>
     </div>
   );

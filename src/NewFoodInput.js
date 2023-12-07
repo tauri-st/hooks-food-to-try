@@ -11,7 +11,7 @@ updater function by passing it the onChange event below*/}
   const updateFood = (e) => {
     setFood(e.target.value);
   };
-  /* HERE 10. Create a handleSubmit function which will fire
+  /*10. Create a handleSubmit function which will fire
   whenever the user clicks on the "Add to the list" button*/
 const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,7 +19,7 @@ const handleSubmit = (e) => {
     and give it the food you’ve kept in state */
     props.addFoodItem(food);
   };
-  
+
   return (
     //11. Add an onSubmit handler with handleSubmit as a value
     <form className="food-form" onSubmit={handleSubmit}>

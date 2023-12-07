@@ -3,18 +3,18 @@ import NewFoodInput from "./NewFoodInput";
 import "./styles.css";
 
 export default function App() {
-  //1.Create state with an initial value of an empty array
+  //5.Create state with an initial value of an empty array
   const [ foodsToTry, setFoodsToTry ] = useState[];
-  //2. Add a function to accept a food and add it to the foodsToTry array"
+  //6. Add a function to accept a food and add it to the foodsToTry array"
   function addFoodItem (food) {
     foodsToTry.concat(food);
   }
   return (
     <div className="App">
       <h1>New Foods to Try</h1>
-      {/*Pass the addFoodItem function as a prop to the NewFoodInput component*/}
+      {/*8. Pass the addFoodItem function as a prop to the NewFoodInput component*/}
       <NewFoodInput addFoodItem={addFoodItem} />
-      {/*3. Map over the foodstoTry array and output a list item
+      {/*7. Map over the foodstoTry array and output a list item
       for each food*/}
       <ul className="food-list">
         const addFoodItem = foodsToTry.map(function (item) {

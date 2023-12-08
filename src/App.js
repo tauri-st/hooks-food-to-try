@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import NewFoodInput from "./NewFoodInput";
+import Food from "./Food";
 import "./styles.css";
 
 export default function App() {
@@ -18,9 +19,11 @@ export default function App() {
       <NewFoodInput addFoodItem={addFoodItem} />
       {/*7. Render an Array Data Model: Map over the foodstoTry 
       array and output a list item for each food*/}
+      {/*A. Use the Food component instead of outputting a list item
+      B. Pass food as a prop*/}
       <ul className="food-list">
         {foodsToTry.map((food, index) => (
-          <li key={index}>{food}</li>
+          <Food key={index} food={food}/>
         ))};
       </ul>
     </div>

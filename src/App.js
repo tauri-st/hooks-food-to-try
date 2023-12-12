@@ -3,6 +3,7 @@ import NewFoodInput from "./NewFoodInput";
 import Food from "./Food";
 import "./styles.css";
 
+//This file owns the state that updates the food list
 export default function App() {
   //5.Create state with an initial value of an empty array
   const [ foodsToTry, setFoodsToTry ] = useState([]);

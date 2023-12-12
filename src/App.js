@@ -13,6 +13,12 @@ export default function App() {
   const addFoodItem = (food) => {
     setFoodsToTry(foodsToTry.concat(food));
   }
+
+  const deleteFood = (foodToDelete) => {
+    const updatedFoods = foodsToTry.filter(function (item) {
+      return item.!includes(foodToDelete);
+    });
+  }
   return (
     <div className="App">
       <h1>New Foods to Try</h1>

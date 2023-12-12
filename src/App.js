@@ -16,7 +16,7 @@ export default function App() {
 
   const deleteFood = (foodToDelete) => {
     const updatedFoods = foodsToTry.filter(function (item) {
-      return item.!includes(foodToDelete);
+      return !item.includes(foodToDelete);
     })
     setFoodsToTry(updatedFoods);
 

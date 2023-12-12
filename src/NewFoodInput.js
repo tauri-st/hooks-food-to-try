@@ -17,7 +17,9 @@ const handleSubmit = (e) => {
     e.preventDefault();
     /* 12. Use the addFoodItem function from the App component 
     and give it the food you’ve kept in state */
-    props.addFoodItem(food);
+    if (food !== "") {
+      props.addFoodItem(food);
+    }
     setFood("");
   };
 

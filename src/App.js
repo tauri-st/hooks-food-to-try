@@ -15,11 +15,11 @@ export default function App() {
   }
 
   const deleteFood = (foodToDelete) => {
-    const updatedFoods = foodsToTry.filter(function (item) {
-      return !item.includes(foodToDelete);
+    const updatedFoods = foodsToTry.filter(function (food) {
+      return !food.includes(foodToDelete);
     })
     setFoodsToTry(updatedFoods);
-
+    //Pass deleteFood as a prop to the Food Component in the return statement below
   }
   return (
     <div className="App">
@@ -32,7 +32,7 @@ export default function App() {
       B. Pass food as a prop*/}
       <ul className="food-list">
         {foodsToTry.map((food, index) => (
-          <Food key={index} food={food}/>
+          <Food key={index} food={food} deleteFood={deleteFood}/>
         ))};
       </ul>
     </div>

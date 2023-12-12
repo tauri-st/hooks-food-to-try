@@ -3,6 +3,7 @@ import NewFoodInput from "./NewFoodInput";
 import Food from "./Food";
 import "./styles.css";
 
+//This file owns the state that updates the food list
 export default function App() {
   //5.Create state with an initial value of an empty array
   const [ foodsToTry, setFoodsToTry ] = useState([]);
@@ -11,6 +12,14 @@ export default function App() {
   array*/
   const addFoodItem = (food) => {
     setFoodsToTry(foodsToTry.concat(food));
+  }
+
+  const deleteFood = (foodToDelete) => {
+    const updatedFoods = foodsToTry.filter(function (food) {
+      return !food.includes(foodToDelete);
+    })
+    setFoodsToTry(updatedFoods);
+    //Pass deleteFood as a prop to the Food Component in the return statement below
   }
   return (
     <div className="App">
@@ -23,7 +32,7 @@ export default function App() {
       B. Pass food as a prop*/}
       <ul className="food-list">
         {foodsToTry.map((food, index) => (
-          <Food key={index} food={food}/>
+          <Food key={index} food={food} deleteFood={deleteFood}/>
         ))};
       </ul>
     </div>

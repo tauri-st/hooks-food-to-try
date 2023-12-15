@@ -9,8 +9,9 @@ const Food = ({name}) => {
         setTried(!tried);
     };
 
-    return <li className={tried ? "strike" : ""} onClick={strikethroughTried}>{name}</li>
-    
+    return (
+        <li className={tried ? "strike" : ""} onClick={strikethroughTried}>{name}</li>
+    )
 };
 
 export default Food;

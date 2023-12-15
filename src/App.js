@@ -14,7 +14,6 @@ export default function App() {
     setFoodsToTry(foodsToTry.concat(food));
   }
 
-  }
   return (
     <div className="App">
       <h1>New Foods to Try</h1>

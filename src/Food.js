@@ -10,7 +10,9 @@ const Food = ({name}) => {
     };
 
     return (
-        <li className={tried ? "strike" : ""} onClick={strikethroughTried}>{name}</li>
+        <li className={tried ? "strike" : ""} onClick={strikethroughTried}>
+            {name}
+        </li>
     )
 };
 

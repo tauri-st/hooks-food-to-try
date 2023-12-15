@@ -14,19 +14,20 @@ export default function App() {
     setFoodsToTry(foodsToTry.concat(food));
   }
 
+  /*8. Pass the addFoodItem function as a prop to the 
+  NewFoodInput component*/
+  /*7. Render an Array Data Model: Map over the foodstoTry 
+  array and output a list item for each food*/
+  //A. Use the Food component instead of outputting a list item
+  //B. Pass food as a prop
   return (
     <div className="App">
       <h1>New Foods to Try</h1>
-      {/*8. Pass the addFoodItem function as a prop to the NewFoodInput component*/}
       <NewFoodInput addFoodItem={addFoodItem} />
-      {/*7. Render an Array Data Model: Map over the foodstoTry 
-      array and output a list item for each food*/}
-      {/*A. Use the Food component instead of outputting a list item
-      B. Pass food as a prop*/}
       <ul className="food-list">
         {foodsToTry.map((food, index) => (
-          <Food key={index} food={food}/>
-        ))};
+          <Food key={index} name={food}/>
+        ))}
       </ul>
     </div>
   );

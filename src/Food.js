@@ -5,7 +5,11 @@ const Food = ({name}) => {
 
     const [tried, setTried] = useState(false);
 
-    return <li className={tried ? "strike" : ""}>{name}</li>
+    const strikethroughTried = () => {
+        setTried(!tried);
+    };
+
+    return <li className={tried ? "strike" : ""} onClick={strikethroughTried}>{name}</li>
     
 };
 

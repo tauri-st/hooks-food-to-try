@@ -5,7 +5,7 @@ const Food = ({name}) => {
 
     const [tried, setTried] = useState(false);
 
-    return <li>{name}</li>
+    return <li className={tried ? "strike" : ""}>{name}</li>
     
 };
 

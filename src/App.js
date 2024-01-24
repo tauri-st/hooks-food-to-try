@@ -14,6 +14,13 @@ export default function App() {
     setFoodsToTry(foodsToTry.concat(food));
   }
 
+  // D. Create a function to delete a food and accept 
+  // foodToDelete as a parameter
+  // E. Filter through the foodsToTry array and return only 
+  // the items that aren’t the foodToDelete item.
+  // F. Save this new filtered array to a variable named 
+  // updatedFoods and pass it to the setFoodsToTry updater 
+  // function.
   const deleteFood = (foodToDelete) => {
     const updatedFoods = foodsToTry.filter(function (food) {
       return !food.includes(foodToDelete);
@@ -30,6 +37,8 @@ export default function App() {
       array and output a list item for each food*/}
       {/*A. Use the Food component instead of outputting a list item
       B. Pass food as a prop*/}
+      {/* G. You’ll need to pass deleteFoods to the Food 
+      component. Pass deleteFood as a prop */}
       <ul className="food-list">
         {foodsToTry.map((food, index) => (
           <Food key={index} food={food} deleteFood={deleteFood}/>

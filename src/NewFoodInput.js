@@ -15,11 +15,14 @@ updater function by passing it the onChange event below*/}
   whenever the user clicks on the "Add to the list" button*/
 const handleSubmit = (e) => {
     e.preventDefault();
-    /* 12. Use the addFoodItem function from the App component 
-    and give it the food you’ve kept in state */
+    // 12. Check if food is blank so blank food items can't
+    // be added
+    // 13. Use the addFoodItem function from the App component 
+    // and give it the food you’ve kept in state
     if (food !== "") {
       props.addFoodItem(food);
     }
+    //14. Reset state to food to blank
     setFood("");
   };
 
